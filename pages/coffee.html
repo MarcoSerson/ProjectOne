@@ -1,76 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The best coffee</title>
     <meta charset="UTF-8">
-             
-		<style>
-            html { background-color:#F6F6F6 }
-            
-            main { width:955px; margin:-1px auto 10px; border:1px solid #ddd; background-color:#FFF; font-family:Arial, Helvetica, sans-serif }
-            header { width:955px; height:95px }
-            
-            nav { width: 955px; background-color: #5D240A }
-            nav ul { list-style:none; margin:0; padding:4px }
-            nav ul li { display:inline-block }
-            nav ul li a { font-size: 0.85em; text-decoration: none; color: #FFF; padding: 4px 20px }
-            nav ul li a:hover { background-color: #B4531A }
-            
-            article { float:none; margin:30px 20px; }
-            
-            article header hgroup h1 {
-                margin:0;
-                text-align: center;
-            }
 
-            article header hgroup h5 {
-                margin:0; font-size: 1.1em; color:#ccc;
-                font-weight: 100;
-                text-align: center;
-            }
-                          	
-            footer { clear:both; width:700px; margin:0 auto; font-size:0.75em; text-align:center; background-color:#ECECEC; padding:5px }
-            
-            h1, h2, h4 { font-family:Georgia, "Times New Roman", Times, serif; color:#C63; font-style:italic; letter-spacing:-0.05em;  text-align: center; }
-            h1 { font-size:2.6em; margin:0 5px; }
-            h4 { font-size:1.6em; margin:0 5px; }
-            p, li { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.9em; color:#555; line-height:1.8; text-align: center; }
+    <style>
+        html {
+            background-color: #F6F6F6
+        }
 
-            .cimg {
+        main {
+            width: 955px;
+            margin: -1px auto 10px;
+            border: 1px solid #ddd;
+            background-color: #FFF;
+            font-family: Arial, Helvetica, sans-serif
+        }
 
-                width: 920px;
-                height: 1200px;
-                              
-            }
+        header {
+            width: 955px;
+            height: 95px
+        }
 
-            article ul {
+        nav {
+            width: 955px;
+            background-color: #5D240A
+        }
 
-                width:900px;
-                text-align:left;      
-                
-                }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 4px
+        }
 
-        </style>  
+        nav ul li {
+            display: inline-block
+        }
+
+        nav ul li a {
+            font-size: 0.85em;
+            text-decoration: none;
+            color: #FFF;
+            padding: 4px 20px
+        }
+
+        nav ul li a:hover {
+            background-color: #B4531A
+        }
+
+        article {
+            float: none;
+            margin: 30px 20px;
+        }
+
+        article header hgroup h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        article header hgroup h5 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #ccc;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        footer {
+            clear: both;
+            width: 700px;
+            margin: 0 auto;
+            font-size: 0.75em;
+            text-align: center;
+            background-color: #ECECEC;
+            padding: 5px
+        }
+
+        h1,
+        h2,
+        h4 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            color: #C63;
+            font-style: italic;
+            letter-spacing: -0.05em;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin: 0 5px;
+        }
+
+        h4 {
+            font-size: 1.6em;
+            margin: 0 5px;
+        }
+
+        p,
+        li {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        
+        .zoom {
+            overflow: hidden;
+            width: 920px;
+            height: 1350px;
+        }
+
+        .zoom img {
+            max-width: 100%;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .zoom:hover img {
+            -moz-transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+        }
+
+
+        article ul {
+
+            width: 900px;
+            text-align: left;
+
+        }
+    </style>
 </head>
+
 <body>
 
     <main>
-    
+
         <header>
             <img src="../imagens/Topo.png">
         </header>
 
         <nav>
             <ul>
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="coffee.html">COFFEE</a></li>
-              <li><a href="info.html">INFO</a></li>
-              <li><a href="special-events.html">SPECIAL EVENTS</a></li>
-              <li><a href="menu.html">MENU</a></li>
-              <li><a href="review.html">PICTURES</a></li>
-              <li><a href="location.htm">LOCATION</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="coffee.html">COFFEE</a></li>
+                <li><a href="info.html">INFO</a></li>
+                <li><a href="special-events.html">SPECIAL EVENTS</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="review.html">PICTURES</a></li>
+                <li><a href="location.htm">LOCATION</a></li>
             </ul>
         </nav>
 
@@ -81,18 +165,23 @@
                     <h5>What kind do you prefer?</h5>
                 </hgroup>
             </header>
-            
-            <img class="cimg" src="/imagens/coffeetable.jpg"></img>
-    
+
+           <div class="zoom">
+            <img src="/imagens/coffeetable.jpg" class="img-responsive">
+           
+
+          </div>
+
+
             <h4>All of our Coffees</h4>
             <ul>
                 <li>Ristretto - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, aliquid.</li>
                 <li>Espresso - Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             </ul>
         </article>
-            
 
-       
+
+
 
         <footer>
             <p>Cafe - Imaginary Website</p>
@@ -100,6 +189,7 @@
         </footer>
 
     </main>
-    
+
 </body>
+
 </html>
