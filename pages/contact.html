@@ -113,26 +113,75 @@
             line-height: 1.8
         }
 
-        input {
+        fieldset {
+            border: 0;
+        }
+
+        input,
+        textarea,
+        button {
+            border-radius: 5px;
+        }
+
+        .campo {
+            margin-bottom: 1em;
+        }
+
+        .campo label {
+            margin-bottom: 0.2em;
+            color: #B4531A;
             display: block;
-            margin-bottom: 20px;
-            border: 1px solid #999;
-            padding: 8px;
-            border-radius: 3px;
         }
 
-        input:focus {
-            border: 1px solid #ccc;
-            outline: none;
+        fieldset.grupo .campo {
+            float: left;
+            margin-right: 1em;
         }
 
-        input[type=submit] {
-            width: 100px;
-            color: #FFF;
-            background: linear-gradient(top, #F33, #933);
-            background: -webkit-linear-gradient(top, #F33, #933);
-            background: -moz-linear-gradient(top, #F33, #933);
-            border: 1px solid #333;
+        fieldset.group .campo {
+            
+            margin-left: 10%;
+        }
+
+        .total {
+            margin-left: 20%;
+        }
+
+        .campo input[type="text"],
+        .campo input[type="email"],
+        .campo input[type="tel"],
+        .campo textarea {
+            padding: 0.2em;
+            border: 1px solid #C63;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+
+        .campo input:focus,
+        .campo textarea:focus {
+            background: rgb(250, 218, 190);
+        }
+
+        .bottom {
+            font-size: 1.2em;
+            background: sienna;
+            border: 0;
+            margin-bottom: 1em;
+            color: #ffffff;
+            padding: 0.2em 0.6em;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            margin-left: 30%;
+        }
+
+        .bottom:hover {
+
+            background: rgb(175, 47, 8);
+            box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: none;
+        }
+
+        .botttom {
             cursor: pointer;
         }
     </style>
@@ -172,24 +221,44 @@
                 distinctio.</p>
 
 
-            <form action="https://formspree.io/f/YOURCODEONFORMSPREE" method="POST"> <!--To send this form only with HTML code, you must register on https://formspree.io/ ! The purpose of this code is finish it only with HTML and a little of CSS. That's why we do not use PHP or other kind of Script -->
+            <form class="total" action="https://formspree.io/f/YOURCODEONFORMSPREE" method="POST">
+                <!--To send this form only with HTML code, you must register on https://formspree.io/ ! The purpose of this code is finish it only with HTML and a little of CSS. That's why we do not use PHP or other kind of Script -->
 
-                <label for="nome">Name</label>
-                <input type="text" name="Name" id="name" maxlength="100" required placeholder="Your Name" autofocus>
+                <fieldset class="grupo">
+                    <div class="campo">
+                        <label for="name"><strong>Name</strong></label>
+                        <input type="text" name="name" id="name" maxlength="100" required placeholder="Your Name"
+                            autofocus>
 
-                <label for="celphone">Celphone</label>
-                <input type="tel" name="Celphone" id="celphone" maxlength="30" required placeholder="Your Mobile Phone">
+                    </div>
 
-                <label for="email">E-mail</label>
-                <input type="email" name="E-mail" id="email" size="50" maxlength="100" required placeholder="Your E-mail">
+                    <div class="campo">
+                        <label for="celphone">Celphone</label>
+                        <input type="tel" name="celphone" id="celphone" maxlength="30" required
+                            placeholder="Your Mobile Phone">
+                    </div>
+                </fieldset>
 
-                <label for="subject">Subject</label>
-                <input type="text" name="Subject" id="subject" placeholder="Subject">
+                <fieldset class="group">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" size="30" maxlength="100" required
+                        placeholder="Your E-mail">
+                </div>
 
-                <textarea name="Message" id="message" placeholder="Write your message here." rows="10" size="50" maxlength="500"></textarea>
-                
-                <input type="submit" value="Send" id="send" name="Send">
+                <div class="campo">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" size="30" placeholder="Subject">
+                </div>
 
+            </fieldset>
+
+                <div class="campo">
+                    <textarea name="message" id="message" placeholder="Write your message here." rows="6"
+                        style="width: 26em" maxlength="500"></textarea>
+                </div>
+
+                <input class="bottom" type="submit" value="Send" id="send" name="send">
 
             </form>
         </article>
