@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Special Events</title>
+    <title>Contact us</title>
+
     <style>
         html {
             background-color: #F6F6F6
@@ -54,33 +55,20 @@
             width: 600px
         }
 
-        article header h1 {
-            margin: 0;
+        article header hgroup h1 {
+
+            margin-right: 335px;
+            text-align: center;
         }
 
-        article header h5 {
-            margin: 0;
+        article header hgroup h5 {
+            margin-right: 335px;
+            margin-top: 0;
             font-size: 1.1em;
             color: #ccc;
             font-weight: 100;
+            text-align: center;
         }
-
-        aside {
-            float: left;
-            width: 230px;
-            border-top: 1px solid #CC6633;
-            border-bottom: 1px solid #CC6633;
-            padding: 40px 10px 0;
-            font-style: italic;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            background: url(../imagens/aspas.gif) no-repeat;
-        }
-
-        aside p {
-            color: #999;
-        }
-
 
         #apoio {
             float: right;
@@ -124,14 +112,41 @@
             color: #555;
             line-height: 1.8
         }
+
+        input {
+            display: block;
+            margin-bottom: 20px;
+            border: 1px solid #999;
+            padding: 8px;
+            border-radius: 3px;
+        }
+
+        input:focus {
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        input[type=submit] {
+            width: 100px;
+            color: #FFF;
+            background: linear-gradient(top, #F33, #933);
+            background: -webkit-linear-gradient(top, #F33, #933);
+            background: -moz-linear-gradient(top, #F33, #933);
+            border: 1px solid #333;
+            cursor: pointer;
+        }
     </style>
+
 </head>
 
 <body>
+
     <main>
+
         <header>
             <img src="../imagens/Topo.png">
         </header>
+
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -146,48 +161,40 @@
 
         <article>
             <header>
-                <h1>Special Events</h1>
+                <hgroup>
+                    <h1>We always answer you!</h1>
+                    <h5>Send us a message!</h5>
+                </hgroup>
             </header>
 
-            <h2>Our Invitation to You </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente corrupti quos error mollitia sed! Rem
-                voluptate, tenetur similique excepturi laudantium dolore facere. Tenetur, nulla officia facilis optio,
-                praesentium nesciunt incidunt aut distinctio, autem facere non perspiciatis. Adipisci ullam molestias
-                repellendus laborum eos aspernatur vel autem magnam, unde dolore, dolor aliquid! </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum corrupti itaque consequatur
-                perferendis facere adipisci aliquam magni magnam? Perferendis quae ratione qui molestiae adipisci quia
-                laboriosam unde porro corrupti.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eligendi molestiae minus, est similique
-                nobis laudantium libero veritatis! Quia, quaerat? </p>
-            <h4>Take a Closer Look</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique doloribus fugit dicta, veniam tenetur
-                aspernatur dolor placeat voluptatibus officia minus? </p>
-            <h4>Our Special Event Menu</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo obcaecati, veritatis magni
-                labore itaque.</p>
-            <h4>Appetizers</h4>
-            <ul>
-                <li>Roasted Tomato Soup - served with your choice of:
-                    <ol type="a">
-                        <li>goat cheese </li>
-                        <li>provolone</li>
-                        <li>appenzella</li>
-                    </ol>
-                </li>
-                <li>Summer Salad - organic butter lettuce with apples, blood oranges, and gorgonzola, tossed with
-                    raspberry vinaigrette.</li>
-                <li>Crispy Flatbread - topped with asiago, prosciutto, and rocket.</li>
-            </ul>
-            <h4>Entrees</h4>
-            <ul type="square">
-                <li>Caviar - Salmon and dill pate with capers, shallots and toasted pave perene sourdough bread. </li>
-                <li>Les rillettes de saumon - Salmon and dill pate with capers, shallots and toasted pave perene
-                    sourdough bread. </li>
-                <li>Soupe de pois a l'oseille - Creamy pea and sorrel soup.</li>
-            </ul>
-            <hr width="50%" size="1" color="#E10B0F" />
-            <p>Imaginary Cafe <sup>&reg;</sup></p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique id voluptates ex, quisquam, libero,
+                ipsa est beatae amet deleniti at officia veniam eligendi modi. Quisquam quae cupiditate rem animi
+                distinctio.</p>
+
+
+            <form action="https://formspree.io/f/YOURCODEONFORMSPREE" method="POST"> <!--To send this form only with HTML code, you must register on https://formspree.io/ ! The purpose of this code is finish it only with HTML and a little of CSS. That's why we do not use PHP or other kind of Script -->
+
+                <label for="nome">Name</label>
+                <input type="text" name="Name" id="name" maxlength="100" required placeholder="Your Name" autofocus>
+
+                <label for="celphone">Celphone</label>
+                <input type="tel" name="Celphone" id="celphone" maxlength="30" required placeholder="Your Mobile Phone">
+
+                <label for="email">E-mail</label>
+                <input type="email" name="E-mail" id="email" size="50" maxlength="100" required placeholder="Your E-mail">
+
+                <label for="subject">Subject</label>
+                <input type="text" name="Subject" id="subject" placeholder="Subject">
+
+                <textarea name="Message" id="message" placeholder="Write your message here." rows="10" size="50" maxlength="500"></textarea>
+                
+                <input type="submit" value="Send" id="send" name="Send">
+
+
+            </form>
         </article>
+
+
 
         <div id="apoio">
             <section class="fotos_apoio">
